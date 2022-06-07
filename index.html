@@ -17,7 +17,7 @@
 
 <body>
     <center>
-        <h2 id="tips">页面跳转中，很快你会收到下载提示，请点击“下载”按钮</h2>
+        <h2 id="tips">请点击右上角的“···”，选择在浏览器中打开进行下载</h2>
     </center>
     <script type="text/javascript">
 
@@ -31,7 +31,7 @@
             // 是安卓浏览器
             if (isAndroid) {
                 if (is_weixn()) { // 是微信内部webView
-                    alert("请点击右上角的“···”，选择在浏览器中打开进行下载。");
+                    alert("请点击右上角的“···”，选择“在浏览器打开”进行下载。");
                 }
                 else {
                     window.location.href = 'https://hub.fastgit.xyz/CzQi/LL/releases/download/v1.6.4/Lumina.Splash_v1.6.4.apk'; // 跳安卓端下载地址
