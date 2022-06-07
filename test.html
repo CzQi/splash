@@ -10,11 +10,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>Lumina Splash下载</title>
-    <script src="js/jquery.js"></script>
 
 </head>
 
@@ -33,16 +30,16 @@
             var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
             // 是安卓浏览器
             if (isAndroid) {
-                window.location.href = 'https://hub.fastgit.xyz/CzQi/LL/releases/download/v1.6.4/Lumina.Splash_v1.6.4.apk'; // 跳安卓端下载地址
+                if (is_weixn()) { // 是微信内部webView
+                    alert("请点击右上角的“···”，选择在浏览器中打开进行下载。");
+                }
+                else {
+                    window.location.href = 'https://hub.fastgit.xyz/CzQi/LL/releases/download/v1.6.4/Lumina.Splash_v1.6.4.apk'; // 跳安卓端下载地址
+                }
             }
             // 是iOS浏览器
             if (isIOS) {
                 window.location.href = 'https://apps.apple.com/cn/app/lumina-splash/id952353274'; // 跳AppStore下载地址
-            }
-
-            // 是微信内部webView
-            if (is_weixn()) {
-                alert("请点击右上角的“···”，选择<span style="color: red">在浏览器中打开</span>进行下载。");
             }
 
             // 是PC端
